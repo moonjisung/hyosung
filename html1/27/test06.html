@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <script src="http://code.jquery.com/jquery-1.12.3.min.js" charset="utf-8"></script>
+  <title></title>
+  <script>
+    $(document).ready(function(){
+      //요소들의 현재상태를 읽어온다.
+      //inner,outer border를 포함하느냐 마느냐
+      var hei=$(".menu").outerHeight();
+      // alert(hei);
+      $(".submenu").css("height",hei);
+    });
+    $(function() {
+      $(".menu li").mouseover(function(){
+        var idx=$(this).index();
+        $(".submenu").eq(idx).css("display","block");
+        $(".submenu").eq(idx).siblings().css("display","none");
+      });
+    });
+  </script>
+  <style>
+    * {
+      margin: 0 auto;
+      padding: 0;
+      list-style: none;
+      font-family: "맑은 고딕";
+    }
+
+    #wrap {
+      width: 600px;
+    }
+
+    #area1 {
+      width: 150px;
+      float: left;
+    }
+
+    #area2 {
+      width: 450px;
+      float: left;
+      position:relative;
+    }
+    .menu{
+      width: 100%;
+      background-color:black;
+      color:white;
+    }
+    .menu>li{
+      padding:5px;
+    }
+    .menu>li:hover{
+      background-color:white;
+      color:black;
+    }
+    .submenu{
+      width: 100%;
+      background-color:red;
+      position:absolute;
+      display:none;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="wrap">
+    <div id="area1">
+      <ul class="menu">
+        <li>메뉴1</li>
+        <li>메뉴2</li>
+        <li>메뉴3</li>
+      </ul>
+    </div>
+    <div id="area2">
+      <div class="submenu">서브메뉴1</div>
+      <div class="submenu">서브메뉴2</div>
+      <div class="submenu">서브메뉴3</div>
+    </div>
+  </div>
+</body>
+
+</html>

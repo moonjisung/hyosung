@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <script>
+    var name1 = new Array();
+    var bsp1 = new Array();
+    var club = new Array();
+    var bt = new Array();
+    var str = "";
+    var money = new Array();
+    var cnt = 0;
+
+    function input() {
+      money[cnt] = 1;
+      name1[cnt] = frm.name.value;
+      if (document.getElementById("club1").checked == true) {
+        var i = document.getElementById("club1").value;
+        club1.checked[cnt] = false;
+        money[cnt] = money[cnt] + 1;
+      }
+      if (document.getElementById("club2").checked == true) {
+        var i = document.getElementById("club2").value;
+        club2.checked[cnt] = false;
+        money[cnt] = money[cnt] + 0.5;
+      }
+      if (document.getElementById("club3").checked == true) {
+        club3.checked[cnt] = false;
+        var i = document.getElementById("club3").value;
+      }
+      club[cnt] = i;
+      bsp1[cnt] = frm.bsp.value;
+      if (bsp1 >= 150) {
+        money[cnt] = money[cnt] + 1;
+      }
+      if (bsp1 >= 145 && bsp1 <= 149) {
+        money[cnt] = money[cnt] + 0.5;
+      }
+
+      if (document.getElementById("bt1").checked == true) {
+        str += document.getElementById("bt1").value;
+        money[cnt] = money[cnt] + 0.5;
+      }
+      if (document.getElementById("bt2").checked == true) {
+        str += document.getElementById("bt2").value;
+        money[cnt] = money[cnt] + 0.5;
+      }
+      if (document.getElementById("bt3").checked == true) {
+        str += document.getElementById("bt3").value;
+        money[cnt] = money[cnt] + 0.5;
+      }
+      if (document.getElementById("bt4").checked == true) {
+        str += document.getElementById("bt4").value;
+        money[cnt] = money[cnt] + 0.5;
+      }
+      if (document.getElementById("bt5").checked == true) {
+        str += document.getElementById("bt5").value;
+        money[cnt] = money[cnt] + 0.5;
+      }
+      if (document.getElementById("bt6").checked == true) {
+        str += document.getElementById("bt6").value;
+        money[cnt] = money[cnt] + 0.5;
+      }
+      bt[cnt] = str;
+      frm.name.value = " ";
+      frm.bsp.value = " ";
+      document.getElementById("bt1").checked = false;
+      document.getElementById("bt2").checked = false;
+      document.getElementById("bt3").checked = false;
+      document.getElementById("bt4").checked = false;
+      document.getElementById("bt5").checked = false;
+      document.getElementById("bt6").checked = false;
+      document.getElementById("club1").checked = false;
+      document.getElementById("club2").checked = false;
+      document.getElementById("club3").checked = false;
+      frm.name.focus();
+      str = "";
+      cnt++;
+    }
+
+    function output() {
+      document.write("<table border='1'>");
+      document.write("<tr>");
+      document.write("<td>이름</td>");
+      document.write("<td>리그</td>");
+      document.write("<td>구속</td>");
+      document.write("<td>구종</td>");
+      document.write("<td>연봉</td>");
+      document.write("</tr>");
+      for (i = 0; i < name1.length; i++) {
+        document.write("<tr>");
+        document.write("<td>");
+        document.write(name1[i]);
+        document.write("</td>");
+        document.write("<td>");
+        document.write(club[i]);
+        document.write("</td>");
+        document.write("<td>");
+        document.write(bsp1[i]);
+        document.write("</td>");
+        document.write("<td>");
+        document.write(bt[i]);
+        document.write("</td>");
+        document.write("<td>");
+        document.write(money[i] + "억");
+        document.write("</td>");
+        document.write("</tr>");
+      }
+      document.write("</table>");
+    }
+  </script>
+</head>
+
+<body>
+  <form name="frm">
+    <table border="1">
+      <tr>
+        <td>이름</td>
+        <td><input type="text" name="name"></td>
+      </tr>
+      <tr>
+        <td>리그</td>
+        <td>
+          <input type="radio" value="메이저리그" name="club" id="club1">메이저 리그
+          <input type="radio" value="마이너리그" name="club" id="club2">마이너 리그
+          <input type="radio" value="독립리그" name="club" id="club3">독립 리그
+        </td>
+      </tr>
+      <tr>
+        <td>구속</td>
+        <td><input type="text" name="bsp">KM</td>
+      </tr>
+      <tr>
+        <td>구종</td>
+        <td>
+          <input type="checkbox" value="커브" name="bt1" id="bt1">커브
+          <input type="checkbox" value="슬라이더" name="bt2" id="bt2">슬라이더
+          <input type="checkbox" value="체인지업" name="bt3" id="bt3">체인지업
+          <input type="checkbox" value="너클볼" name="bt4" id="bt4">너클볼
+          <input type="checkbox" value="커터" name="bt5" id="bt5">커터
+          <input type="checkbox" value="싱커" name="bt6" id="bt6">싱커
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2" align="center">
+          <input type="button" value="입력" onclick="input()">
+          <input type="button" value="출력" onclick="output()">
+        </td>
+      </tr>
+    </table>
+  </form>
+</body>
+
+</html>

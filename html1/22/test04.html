@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script>
+    var name1 = new Array();
+    var club = new Array();
+    var addr = new Array();
+    var money = new Array();
+    var pozition = new Araay();
+    var str = "";
+
+    var cnt=0;
+
+    function input(){
+      name1[cnt] = frm.name.vlaue;
+      club[cnt] = frm.game.value;
+      moeny[cnt] = frm.money.value;
+      addr[cnt] = frm.addr.value;
+
+      cnt++;
+    }
+    function output(){
+
+    }
+    var cnt = 0;
+    </script>
+  </head>
+  <body>
+    <form name="frm">
+      <table border="1">
+          <tr>
+            <td>이름</td>
+            <td><input type="text" name="name"></td>
+          </tr>
+          <tr>
+            <td>소속구단</td>
+            <td>
+              <select name="club">
+              <option value="두산">두산</option>
+              <option value="롯데">롯데</option>
+              <option value="SK">SK</option>
+              <option value="NC">NC</option>
+              <option value="LG">LG</option>
+              <option value="한화">한화</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>주민번호</td>
+            <td><input type="text" name="addr">-
+                <input type="text" name="addr1">
+            </td>
+          </tr>
+          <tr>
+            <td>연봉</td>
+            <td><input type="text" name="money"></td>
+          </tr>
+          <tr>
+            <td>포지션</td>
+            <td>
+              <input type="checkbox" name="pozi1" value="투수">투수
+              <input type="checkbox" name="pozi2" value="포수">포수
+              <input type="checkbox" name="pozi3" value="타자">타자
+              <input type="checkbox" name="pozi4" value="내야">내야
+              <input type="checkbox" name="pozi5" value="외야">외야
+              <input type="checkbox" name="pozi6" value="중견">중견
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2" align="center">
+              <input type="button" value="입력" onclick="input()">
+              <input type="button" value="출력" onclick="output()">
+            </td>
+          </tr>
+          </table>
+    </form>
+  </body>
+</html>

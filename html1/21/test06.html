@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <script>
+    var name0 = new Array();
+    var game = new Array();
+    var goal1 = new Array();
+    var asist1 = new Array();
+    var award = new Array();
+    var money = new Array();
+    var nexty = new Array();
+    var str="";
+    var cnt=0;
+
+    function input() {
+    name0[cnt] = frm.name.value;
+    game[cnt] = frm.game.value;
+    money[cnt] = parseInt(frm.money.value);
+    var nexty1 = money[cnt];
+//alert(cnt);
+    goal1[cnt] = frm.goal.value;
+    var goal= parseInt(frm.goal.value);
+    if(goal>=20){
+      nexty1 = nexty1 + (nexty1*1);
+    }else if(goal>=10 && goal<20){
+      nexty1 = nexty1 + (nexty1*0.5);
+    }
+    asist1[cnt] = frm.asist.value;
+    var asist = parseInt(frm.asist.value);
+    if(asist >=10){
+      nexty1 = nexty1 + (nexty1*1);
+    }else if(asist>=5 && asist < 10){
+      nexty1 = nexty1 +(nexty1 * 0.5);
+    }
+
+    if(document.getElementById("award0").checked == true){
+    str = str + document.getElementById("award0").value;
+    nexty1 = nexty1 + 1;
+    }
+    if(document.getElementById("award1").checked == true){
+    str = str + document.getElementById("award1").value;
+    nexty1 = nexty1 + 1;
+    }
+    if(document.getElementById("award2").checked == true){
+    str = str + document.getElementById("award2").value;
+    nexty1 = nexty1 + 1;
+    }
+    if(document.getElementById("award3").checked == true){
+    str = str + document.getElementById("award3").value;
+    nexty1 = nexty1 + 1;
+    }
+    if(document.getElementById("award4").checked == true){
+    str = str + document.getElementById("award4").value;
+    nexty1 = nexty1 + 1;
+    }
+
+    award[cnt]=str;
+    nexty[cnt]= nexty1;
+
+    frm.name.value= "";
+    frm.game.value= "";
+    frm.goal.value= "";
+    frm.asist.value="";
+    document.getElementById("award0").checked = false;
+    document.getElementById("award1").checked = false;
+    document.getElementById("award2").checked = false;
+    document.getElementById("award3").checked = false;
+    document.getElementById("award4").checked = false;
+    frm.money.value="";
+    cnt++;
+    }
+    function output() {
+    document.write("<table border='1'>");
+    document.write("<tr>");
+    document.write("<td>이름</td>");
+    document.write("<td>출장경기</td>");
+    document.write("<td>골</td>");
+    document.write("<td>도움</td>");
+    document.write("<td>수상경력</td>");
+    document.write("<td>연봉</td>");
+    document.write("<td>내년연봉</td>");
+    document.write("</tr>");
+    for(var i=0; i< name0.length;i++){
+      document.write("<tr>");
+      document.write("<td>");
+      document.write(name0[i]);
+      document.write("</td>");
+      document.write("<td>");
+      document.write(game[i]);
+      document.write("</td>");
+      document.write("<td>");
+      document.write(goal1[i]);
+      document.write("</td>");
+      document.write("<td>");
+      document.write(asist1[i]);
+      document.write("</td>");
+      document.write("<td>");
+      document.write(award[i]);
+      document.write("</td>");
+      document.write("<td>");
+      document.write(money[i]+"억");
+      document.write("</td>");
+      document.write("<td>");
+      document.write(nexty[i]+"억");
+      document.write("</td>");
+      document.write("</tr>");
+    }
+    document.write("</table>");
+    }
+  </script>
+</head>
+
+<body>
+  <form name="frm">
+    <table border="1" width="600px">
+      <td colspan="4" align="center"><input type="button" value="입력" onclick="input()">
+        <input type="button" value="출력" onclick="output()"></td>
+      <tr>
+        <td align="right">이름</td>
+        <td><input type="text" name="name"></td>
+        <td>연봉</td>
+        <td><input type="text" name="money"></td>
+      </tr>
+      <tr>
+        <td align="right">출장경기</td>
+        <td colspan="3"><input type="text" name="game"></td>
+      </tr>
+      <tr>
+        <td align="right">골</td>
+        <td colspan="3"><input type="text" name="goal"></td>
+      </tr>
+      <tr>
+        <td align="right">도움</td>
+        <td colspan="3"><input type="text" name="asist"></td>
+      </tr>
+      <tr>
+        <td align="right">수상경력</td>
+        <td colspan="3">
+          <input type="checkbox" value="FIFA올해의 선수" name="award0" id="award0">FIFA올해의 선수
+          <input type="checkbox" value="발롱도르" name="award1" id="award1">발롱도르
+          <input type="checkbox" value="챔피언스리그최우수" name="award2" id="award2">챔피언스리그최우수
+          <input type="checkbox" value="리그MVP" name="award3" id="award3">리그MVP
+          <input type="checkbox" value="득점왕" name="award4" id="award4">득점왕
+        </td>
+      </tr>
+    </table>
+  </form>
+</body>
+
+</html>

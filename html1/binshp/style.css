@@ -1,0 +1,100 @@
+*{
+	margin:0 auto;
+	padding:0;
+	list-style:none;
+	font-family:"맑은 고딕";
+}
+a{text-decoration:none;color:inherit;}
+header{
+	width:100%;
+	height:120px;
+	position:relative;
+}
+.logo{width:250px;height:120px;
+	float: left;
+	margin-top: 20px;
+	margin-left: 20px;
+	overflow: hidden;
+	border-radius: 20px;
+}
+.logo>a>img{width:100%;height:100%;}
+.admin{
+	position: absolute;
+	top:10;
+	right:30;
+
+ }
+.welcome1{
+	margin-top: 20px;
+	width: 65%;height: 120px;
+	line-height: 100px;
+	float: left;
+	text-align: center;
+	font-size: 4em;
+	font-style:oblique;
+	color:#0100FF;
+}
+.leftmenu{
+		width: 200px;height: 450px;
+		background-color:#DAD9FF;
+		/* margin-top:100px; */
+		margin-left: 60px;
+		position: absolute;
+		box-shadow: 5px 5px 10px black;
+		z-index: 50;
+		/* float: left; */
+}
+.leftmenu tr>td{
+	width: 180px;
+	height: 50px;
+	border-top: 2px solid black;
+	border-bottom:2px solid black;
+	text-align: center;
+	padding: 10px 0;
+  font-family: 'Pangolin', cursive;
+	float: left;
+}
+.table1{
+	border-collapse: collapse;
+	margin-top:45px;
+	border:1px solid black;
+}
+
+section{
+	margin-top:30px;
+	position: relative;
+	width: 100%;
+	min-height:500px;
+	background-color:#FADFFB;
+	box-shadow:inset 5px 5px 10px 10px #ED49EF;
+	z-index: 20;
+	padding: 30px 0;
+	position: relative;
+	float: left;
+}
+.imgslide{
+	width:60%;height: 500px;
+	overflow: hidden;
+	border-radius: 50px;
+}
+.imgslide img{
+	width: 60%;height:500px;
+	position: absolute;
+	border-radius: 50px;
+}
+.rightmenu{
+	width:200px;height: 500px;
+	border:1px solid black;
+	right: 20px;
+	bottom: 30px;
+	position: absolute;
+	float: left;
+}
+.table2{
+
+}
+footer{
+	width: 100%;height: 100px;
+	position: relative;
+	background-color:blue;
+}

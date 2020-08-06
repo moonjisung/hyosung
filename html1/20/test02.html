@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script>
+      //현재 날짜부터 연말까지 며칠이 남았는지 구하시오.
+      var today = new Date(); //파라미터가 없으면 현재 날짜인식
+      var nowYear =today.getFullYear();
+
+      var theDate=new Date(nowYear,11,31);
+      //파라미터를 주면 해당날짜 인식
+      var diffDate=theDate.getTime()-today.getTime();
+
+      var result=Math.ceil(diffDate/(60*1000*60*24));
+      document.write("연말 D-day:"+result+"일 남았습니다.");
+      //본인의 출생년도를 입력하여.. 현재까지 몇일을 살아왔는지
+      //구해보시오
+
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

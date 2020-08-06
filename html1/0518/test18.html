@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script>
+      function cal(){
+        //국어 영어 수학 평균이 90점이상인 겨우우
+        //우등을 출력 (alert),그렇지 않으면 보통출력
+        //3항조건 연산자로 처리해보시오.
+        var kor=parseInt(frm1.kor.value);
+        var eng=parseInt(frm1.eng.value);
+        var math=parseInt(frm1.math.value);
+        var result;
+        result=(kor+eng+math)/3>= 90 ? "우등생":"시발";
+        alert(result);
+      }
+    </script>
+  </head>
+  <body>
+    <form name="frm1">
+      국어: <input type="text" name="kor"><br>
+      영어: <input type="text" name="eng"><br>
+      수학: <input type="text" name="math"><br>
+      <input type="button" value="우등상여부" onclick="cal()">
+    </form>
+  </body>
+</html>

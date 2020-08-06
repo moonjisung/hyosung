@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<script src="http://code.jquery.com/jquery-1.12.3.min.js"></script>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <script>
+    $(function(){
+    $("#btOk").click(function(){
+      var result_1 = $(".ck").is(":checked");
+      if(result_1 == false){
+        alert("1개이상 체크해주세요");
+      }
+    });
+  });
+  </script>
+</head>
+
+<body>
+  <div id="outer_wrap">
+    <section id="inner_1">
+      좋아하는 스포츠:<br>
+      <input type="checkbox" class="ck">축구
+      <input type="checkbox" class="ck">야구
+      <input type="checkbox" class="ck">농구
+      <input type="checkbox" class="ck">배구
+      <input type="checkbox" class="ck">족구<br>
+      <input type="button" value="확인" id="btOk">
+    </section>
+  </div>
+</body>
+
+</html>

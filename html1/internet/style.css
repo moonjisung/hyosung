@@ -1,0 +1,120 @@
+* {
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+    font-family: "맑은 고딕";
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    background: linear-gradient(to right, #bdc3c7, #2c3e50);
+}
+
+header {
+    width: 800px;
+    height: 110px;
+}
+
+.logo {
+    float: left;
+    width: 200px;
+    height: 110px;
+}
+
+.logo>a>img {
+    width: 100%;
+    height: 100%;
+}
+
+nav {
+    width: 500px;
+    height: 110px;
+    float: right;
+}
+
+.menu {
+    width: 500px;
+    height: 20px;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.menu>li {
+    width: 165px;
+    text-align: center;
+    float: left;
+}
+
+.menu>li:hover {
+    color: whitesmoke;
+    cursor: pointer;
+}
+
+#imgslide {
+    width: 1100px;
+    height: 500px;
+    position: relative;
+}
+
+.imgs {
+    width: 800px;
+    top: 40px;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+}
+
+.imgs>img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+#content {
+    width: 800px;
+    height: 400px;
+    position: relative;
+    top: 40px;
+    border: 1px solid black;
+}
+
+.notice {
+    width: 399px;
+    height: 200px;
+    float: left;
+    position: absolute;
+
+}
+
+.partner {
+    width: 399px;
+    height: 200px;
+    text-align: center;
+    position: relative;
+    float: right;
+    border: 1px solid black;
+}
+
+.partimg {
+    width: 399px;
+    border: 1px solid black;
+    position: absolute;
+}
+
+.partimg>img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+
+}
+
+.title {
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    /* position: relative; */
+}

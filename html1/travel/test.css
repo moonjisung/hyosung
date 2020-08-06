@@ -1,0 +1,129 @@
+* {
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+    font-family: "맑은 고딕";
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+header {
+    width: 100%;
+    height: 110px;
+}
+
+.logo {
+    width: 100px;
+    height: 110px;
+}
+
+.logo>a>img {
+    width: 100%;
+    height: 100px;
+}
+
+nav {
+    width: 100%;
+    height: 50px;
+    background-color: yellowgreen;
+}
+
+.menu {
+    width: 900px;
+    height: 100%;
+}
+
+.menu>li {
+    width: 300px;
+    line-height: 50px;
+    position: relative;
+    float: left;
+    text-align: center;
+}
+
+.menu>li:hover {
+    color: white;
+    cursor: pointer;
+}
+
+.submenu {
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.5);
+    display:none;
+    z-index: 99;
+}
+
+.submenu>li {
+    width: 100px;
+    transition: all 0.4s;
+    color: black;
+}
+
+.submenu>li:hover {
+    height: 50px;
+    background-color: gray;
+    color: white;
+    cursor: pointer;
+}
+#wrap{
+}
+#imgslide{
+    width:100%;
+    height: 600px;
+    background-color: red;
+}
+.imgs{
+    width:1000px;
+    height: 500px;
+    top:50px;
+    position: relative;
+    background-color: black;
+    overflow: hidden;
+}
+.imgs>img{
+    width: 100%;
+    height: 100%;
+}
+#content{
+    width: 1000px;
+    min-height: 500px;
+}
+.notice,.partner{
+    width: 500px;
+    text-align: center;
+    position: relative;
+    top: 50px;
+    float: left;
+    margin-top: 50px;
+}
+.clear{
+    clear: both;
+}
+.title{
+    font-size: 1.2em;
+    font-weight: bold;
+}
+.table1{
+    width:459px;
+    font-size: 0.9em;
+    border-collapse: collapse;
+    color: gray;
+    border-top: 2px solid #4298cc;
+    border-bottom: 2px solid #4298cc;
+}
+.table1 tr>th{
+    border-bottom: 1px solid#4298cc;
+    padding:5px;
+}
+.table1 tr>td{
+    border-bottom: 1px solid #4298cc;
+    padding: 5px;
+}
+.table1 tr:nth-child(2n){
+    background-color: #eee;
+}

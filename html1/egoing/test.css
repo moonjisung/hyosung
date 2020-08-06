@@ -1,0 +1,49 @@
+*{
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  font-family: "맑은 고딕";
+}
+a{
+  text-decoration: none;
+  color:inherit;
+}
+#wrap{
+  width: 1000px;
+  border: 1px solid black;
+}
+#area1{
+  width:150px;
+  height: 377px;
+  float: left;
+  position: relative;
+}
+.menu{
+  background-color:#000;
+  color:#fff;
+  cursor:pointer;
+  font-size:0.9em;
+}
+.menu>li{
+  padding: 5px;
+
+}
+.menu>li:hover{
+  background-color: #fff;
+  color:#000;
+}
+#area2{
+  width: 450px;
+  height: 377px;
+  float: left;
+  position:relative;
+}
+.submenu1,.submenu2,.submenu3,.submenu4
+,.submenu5,.submenu6,.submenu7,.submenu8
+,.submenu9,.submenu10,.submenu11,.submenu12,.submenu13{
+  width:448px;
+  height: 375px;
+  border: 1px solid #000;
+  position: absolute;
+  display: none;
+}

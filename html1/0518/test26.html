@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script>
+     var grade = frm1.grade.value;
+    var gradenum;
+     if(grade=="대학원졸"){
+       gradenum =20;
+     }else if(grade=="대졸"){
+       gradenum =15;
+     }
+    </script>
+  </head>
+  <body>
+    <form name="frm1">
+    이름 : <input type="text" name="name"><br>
+    최종학력 : <select name="grade">
+      <option value="대학원졸">대학원졸</option>
+      <option value="15">대졸</option>
+      <option value="10">초대졸</option>
+      <option value="5">고졸</option>
+    </select><br>
+    토익:<input type="text" name="toeic"><br>
+    보유자격증 :<select name="Certificate">
+      <option value="5">5개</option>
+      <option value="4">보안기사</option>
+      <option value="3">네트워크관리사,정보처리</option>
+      <option value="2">운전</option>
+      <option value="1">기능</option>
+    </select><br>
+    공모전 :<select name="contest">
+      <option value="5">BOB</option>
+      <option value="4">시장배</option>
+      <option value="3">구</option>
+      <option value="2">개</option>
+      <option value="1">기능사</option>
+    </select>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  <script>
+  function plus(){
+    var kor = parseInt(frm1.kor.value);
+    var eng = parseInt(frm1.eng.value);
+    var math = parseInt(frm1.math.value);
+    frm1.total.value=kor+eng+math;
+    frm1.aver.value=((kor+eng+math)/3+0.5);
+  }
+  </script>
+  </head>
+  <body>
+    <form name="frm1">
+      국어:<input type="text" name="kor"><br>
+      영어:<input type="text" name="eng"><br>
+      수학:<input type="text" name="math"><br>
+      <input type="button" value="총점" onclick="plus()">
+      총점:<input type="text" name="total"><br>
+      <input type="button" value="평균" onclick="plus()">
+      평균:<input type="text" name="aver">
+    </form>
+  </body>
+</html>

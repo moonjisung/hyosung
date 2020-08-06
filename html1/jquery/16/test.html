@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <script src="script.js" charset="utf-8"></script>
+  <script src="http://code.jquery.com/jquery-1.12.3.min.js" charset="utf-8"></script>
+  <style>
+    * {
+      margin: 0 auto;
+      padding: 0;
+      list-style: none;
+      font- family: "맑은 고딕";
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    #contents {
+      width: 800px;
+    }
+
+    #contents>li {
+      display: none;
+    }
+
+    #title {
+      width: 800px;
+    }
+
+    #title>li {
+      float: left;
+      width: 150px;
+      text-align: center;
+    }
+    .img{
+      width:100px;
+      height:100px;
+      float:left;
+      padding: 10px;
+    }
+
+    .clear {
+      clear: both;
+    }
+  </style>
+  <script>
+    $(function() {
+      $("#contents").children().eq(0).css("display","block");
+      $("#contents").children().eq(0).siblings().css("display","none");
+      //타이틀 클릭시 변환모드.
+      $("#title>li").click(function(){
+        var idx=$("#title>li").index(this);
+        $("#contents").children().eq(idx).css("display","block");
+        $("#contents").children().eq(idx).siblings().css("display","none");
+      });
+    });
+  </script>
+  <title></title>
+</head>
+
+<body>
+  <br><br>
+  <ul id="title" style="border:1px solid">
+    <li><a href="#">전체상품</a></a></li>
+    <li><a href="#">핫딜</a></li>
+    <li><a href="#">제조사</a></li>
+    <li><a href="#">화면크기</a></li>
+    <li><a href="#">영상출력</a></li>
+  </ul>
+  <div class="clear"></div>
+  <ul id="contents" style="border:1px solid">
+    <li>
+      <img src="1.png" class="img">
+      <img src="2.png" class="img">
+    </li>
+    <li><img src="2.png" class="img"></li>
+    <li><img src="" class="img"></li>
+    <li><img src="" class="img"></li>
+    <li><img src="" class="img"></li>
+  </ul>
+</body>
+
+</html>

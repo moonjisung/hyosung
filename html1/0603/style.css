@@ -1,0 +1,113 @@
+*{
+  margin:0 auto;
+  padding: 0;
+  list-style: none;
+  font-family: "맑은 고딕";
+}
+a{
+  text-decoration: none;
+  color: inherit;
+}
+a:hover{
+  color: white;
+}
+header{
+  width: 100%;
+  height: 100px;
+}
+#top{
+  width: 100%;
+  height: 30px;
+  background-color: #33b3dd;
+  font-size: 0.7em;
+  float: right;
+}
+.topmenu {
+  line-height: 30px;
+  text-align: center;
+  width: 560px;
+  color: #aeddf4;
+  margin-right: 350px;
+}
+#headermenu{
+  background-color: white;
+  width: 100%;
+  height: 70px;
+  float: left;
+}
+#logo{
+  width: 220px;
+  height: 70px;
+  float: left;
+  margin-left: 450px;
+}
+.menu{
+  width: 700px;
+  height: 70px;
+  margin-left: 80px;
+  float: left;
+  position: relative;
+}
+.menu >li{
+  width: 87px;
+  text-align: center;
+  float: left;
+  font-weight: bold;
+  line-height: 70px;
+}
+.menu>li:hover{
+  color: #058A9E;
+  cursor:pointer;
+}
+.submenu{
+  width: 150px;
+  height: 100px;
+  display: none;
+  position: relative;
+  background-color: white;
+  left: 0px;
+  z-index:1;
+}
+.submenu>li{
+  /* position: relative; */
+}
+section{
+  width: 100%;
+  height: 350px;
+  box-shadow: inset 0px 10px 10px 0px #E6E6E6;
+}
+#imgslide{
+  width: 750px;
+  height: 350px;
+  margin-left: 450px;
+  border: 1px solid black;
+}
+.imgs{
+  width: 750px;
+  height: 350px;
+  background-color: black;
+}
+.imgs>img{
+  width: 100%;
+  height: 100%;
+}
+.imgs1{
+   width:100px;
+   height:175px;
+   float:left;
+   position: relative;
+}
+.imgs1 img{
+   width:100%;
+   height:100%;
+}
+.imgs2{
+   width:20%;
+   height:175px;
+   float:left;
+   position:relative;
+}
+.imgs2 img{
+   width:100%;
+   height:100%;
+}

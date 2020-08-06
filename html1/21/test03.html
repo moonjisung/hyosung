@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script>
+    function send(){
+
+      var email =frm.email.value;
+      var result1=email.indexOf("@");
+      var result=email.split("@");
+
+      if(result1==-1){
+        alert("유효하지않습니다.");
+      }else{
+        frm.email1.value=result[0];
+        frm.email2.value=result[1];
+      }
+
+    }
+    </script>
+  </head>
+  <body>
+    <form name="frm">
+      <input type="text" name="email"><br>
+      <input type="text" name="email1">@
+      <input type="text" name="email2">
+      <input type="button" value="확인" onclick="send()">
+    </form>
+  </body>
+</html>

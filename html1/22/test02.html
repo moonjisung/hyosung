@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script>
+      function send(){
+        var check1=false;
+        var check2=false;
+        var check3=false;
+        var check4=false;
+        var cnt=0;
+        if(frm1.id.value !=""){
+          check1=true;
+        }
+        var id=frm1.id.value;
+        if(id.length>=8){
+          check2=true;
+        }
+        var idx=id.charCodeAt(0);
+        if(idx>=97 && idx<=122){
+          check3=true;
+        }
+        var idx2;
+        for(var i=1;i<id.length;i++){
+          idx2=id.charCodeAt(i);
+          if(idx2>=97 && idx2<=122){
+            cnt++;
+          }
+          if(idx2>=48 && idx2<=57){
+            cnt++;
+          }
+          if(idx2>=65 && idx2<=90){
+            cnt++;
+          }
+          if(cnt==id.length-1){
+            check4=true;
+          }
+        }
+
+        if(check1==true && check2==true && check3==true && check4==true){
+          document.write("유효한 아이디");
+        }else{
+          alert("유효하지 않은 아이디");
+        }
+
+      }
+    </script>
+  </head>
+  <body>
+    <form name="frm1">
+      <input type="text" name="id" maxlength="12">
+      (아이디는 영문소문자로 시작하고 8~12자리까지의 영문자와 숫자의 조합으로 사용가능합니다.)
+      <br>
+      <input type="password" name="pw" maxlength="12">
+      <br>
+      <input type="button" value="회원 가입" onclick="send()">
+    </form>
+  </body>
+</html>

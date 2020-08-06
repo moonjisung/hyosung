@@ -1,0 +1,194 @@
+*{
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+}
+a{
+  text-decoration: none;
+  color: inherit;
+}
+header{
+  width: 100%;
+  height: 120px;
+  border: 1px solid black;
+  position: relative;
+}
+.top{
+  position: absolute;
+  right: 0px;
+  font-family: "돋움";
+}
+.logo{
+  width: 170px;
+  height: 100%;
+  /* border:1px solid black; */
+}
+.logo img{
+  width: 100%;
+  height: 100%;
+}
+nav{
+  width: 100%;
+  height: 30px;
+  background: linear-gradient(to right, #6d6027, #d3cbb8);
+}
+.menu {
+    width: 100%;
+    height: 20px;
+    text-align: right;
+}
+
+.menu>li {
+    width: 33%;
+    text-align: center;
+    float: left;
+    padding: 5px 0;
+    position: relative;
+}
+
+.menu>li:hover {
+    color: white;
+    cursor: pointer;
+    transition: all 0.4s;
+    border-radius: 10px;
+}
+
+.submenu {
+   position: absolute;
+   width: 100%;
+   text-align: right;
+   background-color: white;
+   opacity:0.8;
+   color:black;
+   z-index: 99;
+   display:none;
+
+}
+.sublist{
+   width:33%;
+   float:left;
+   text-align:center;
+}
+
+.sublist>li {
+  width: 33%
+   padding: 5px 0;
+   color:black;
+}
+
+.sublist>li:hover {
+   background-color: black;
+   border-top-right-radius: 10px;
+   border-bottom-left-radius: 10px;
+   color: white;
+}
+section{
+  width: 100%;
+  height: 500px;
+  background-color: grey;
+}
+#imgslide {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+#imgslide>img{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.imgs{
+  width: 100%;
+  height: 100%;
+}
+.imgs li{
+  display: none;
+}
+.imgs li:first-child{
+  display: block;
+}
+.imgs li img{
+  width: 100%;
+  height: 500px;
+}
+/* .btn_dot{
+  position: relative;
+  width: 80px;
+  height: 15px;
+  text-align: center;
+  margin: 20px auto;
+}
+.btn_dot ul li{
+  float: left;
+  width: 15px;
+  height: 15px;
+} */
+#wrap{
+  width: 100%;
+  height: 600px;
+}
+#mov{
+  align:center;
+  width: 1200px;
+}
+#mov_up{
+  z-index: 1;
+  display: none;
+  background: rgba(255,255,255 0.5);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+#mov_up .body{
+  margin-top:50px;
+  width: 500px;
+  padding: 15px 0;
+  text-align: center;
+  background: #fff;
+  cursor: pointer;
+}
+#mov_up .body .btnClose{
+  padding: 6px 12px;
+  background-color: #000;
+  color: #000;
+  border: none;
+  borer: 5px;
+  cursor: pointer;
+}
+.movie{
+  padding: 20px;
+  width:350px;
+  height: 250px;
+  float: left;
+}
+.movie >img{
+  border-radius: 20px;
+  width: 100%;
+  height: 100%;
+}
+.movie >img:hover{
+  opacity: 0.5;
+  cursor: pointer;
+  transition: all 0.6s;
+}
+footer{
+  width: 100%;
+  height: 200px;
+  background-color: grey;
+}
+.btn_slides{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 5%;
+}
+.btn_slides a.off{
+  opacity: 0.5;
+  cursor: default;
+}
+.clear{
+  clear: both;
+}

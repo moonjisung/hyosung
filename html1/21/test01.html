@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <script>
+    var str = "web he she";
+    var result = str.charAt(2);
+    document.write(result, "<br>");
+
+    var str = "web he she he";
+    result = str.indexOf("he");
+    document.write(result, "<br>");
+
+    var str = "web he she he";
+    result = str.lastIndexOf("he");
+    document.write(result, "<br>");
+
+    var str = "web he she he";
+    result = str.match("boy");
+    document.write(result, "<br>");
+
+    var str = "web he she";
+    var result = str.replace("web", "html");
+    document.write(result, "<br>");
+
+    var str = "web he she";
+    var result = str.search("he");
+    document.write(result, "<br>");
+
+    var str = "hello javascript";
+    var result = str.slice(3, 7);
+    document.write(result, "<br>");
+
+    var str = "hello javasript";
+    var result = str.substring(3, 7);
+    document.write(result, "<br>");
+
+    var str = "hello javasript";
+    var result = str.substr(3, 2);
+    document.write(result, "<br>");
+
+    var str = "010-3333-4444";
+    var result = str.split("-");
+    for (var i = 0; i < result.length; i++) {
+      document.write(result[i], "<br>");
+    }
+    // document.write(result,"<br>");
+    // document.write("문자 아스키코드값","<br>")
+    // var str="ABCDEFGHIJKLMNOPQRSTUVWXYNZ";
+    // for(var i=0;i<str.length;i++){
+    //   document.write(str.charCodeAt(i),"<br>");
+    // }
+    // document.write("소문자 아스키코드값","<br>")
+    // str =str.toLowerCase();
+    // for(var i=0;i<str.length;i++){
+    //   document.write(str.charCodeAt(i),"<br>");
+    // }
+    // document.write("숫자 아스키코드값","<br>")
+    // var str="0123456789";
+    // for(var i=0;i<str.length;i++){
+    //   document.write(str.charCodeAt(i),"<br>");
+    // }
+    result=String.fromCharCode(42);
+    document.write(result);
+    aaaa
+    공백aaaa
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

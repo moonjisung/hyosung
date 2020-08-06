@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script>
+      function send(){
+      //indexOf와 match내장함수를 이용해서
+      //이메일의 유효성을 확인하시오.
+      //@가 들어있는지 없는지로 구분...
+      var str=frm.email.value;
+      var idx=str.indexOf("@");
+      if(idx==-1){
+        alert("이메일이 유효하지않습니다.");
+        frm.email.select();
+      }else
+      alert("유효한 이메일입니다.");
+      }
+    </script>
+  </head>
+  <body>
+    <form name="frm">
+      <input type="text" name="email">
+      <input type="button" value="확인" onclick="send()">
+    </form>
+  </body>
+</html>

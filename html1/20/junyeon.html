@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    let cnt = -1;
+    let name0 = new Array();
+    let lg0 = new Array();
+    let speed0 = new Array();
+    let bt0 = new Array();
+    let str = "";
+    let money = new Array();
+    let sum;
+
+    function input() {
+      cnt++;
+      name0[cnt] = frm.name.value;
+      lg0[cnt] = frm.lg.value;
+      speed0[cnt] = frm.speed.value;
+      if(document.getElementById('bt1').checked == true) {
+        str += document.getElementById('bt1').value + " ";
+      }
+      if(document.getElementById('bt2').checked == true) {
+        str += document.getElementById('bt2').value + " ";
+      }
+      if(document.getElementById('bt3').checked == true) {
+        str += document.getElementById('bt3').value + " ";
+      }
+      if(document.getElementById('bt4').checked == true) {
+        str += document.getElementById('bt4').value + " ";
+      }
+      if(document.getElementById('bt5').checked == true) {
+        str += document.getElementById('bt5').value + " ";
+      }
+      if(document.getElementById('bt6').checked == true) {
+        str += document.getElementById('bt6').value + " ";
+      }
+      bt0[cnt] = str;
+      sum = 0;
+      if(frm.bt1.checked == true) {
+        sum++;
+      }
+      if(frm.bt2.checked == true) {
+        sum++;
+      }
+      if(frm.bt3.checked == true) {
+        sum++;
+      }
+      if(frm.bt4.checked == true) {
+        sum++;
+      }
+      if(frm.bt5.checked == true) {
+        sum++;
+      }
+      if(frm.bt6.checked == true) {
+        sum++;
+      }
+      if(frm.lg.value == "독립리그" && frm.speed.value >= 150 && sum || sum == 0) {
+        money[cnt] = 1 + 1 + (sum * 0.5);
+      }
+      if(frm.lg.value == "독립리그" && frm.speed.value >= 145 && frm.speed.value < 150 && sum || sum == 0) {
+        money[cnt] = 1 + 0.5 + (sum * 0.5);
+      }
+      if(frm.lg.value == "독립리그" && frm.speed.value < 145 && sum || sum == 0) {
+        money[cnt] = 1 + 0 + (sum * 0.5);
+      }
+      if(frm.lg.value == "마이너리그" && frm.speed.value >= 150 && sum || sum == 0) {
+        money[cnt] = 1.5 + 1 + (sum * 0.5);
+      }
+      if(frm.lg.value == "마이너리그"  && frm.speed.value >= 145 && frm.speed.value < 150 && sum || sum == 0) {
+        money[cnt] = 1.5 + 0.5 + (sum * 0.5);
+      }
+      if(frm.lg.value == "마이너리그" && frm.speed.value < 145 && sum || sum == 0) {
+        money[cnt] = 1.5 + 0 + (sum * 0.5);
+      }
+      if(frm.lg.value == "메이저리그" && frm.speed.value >= 150 && sum || sum == 0) {
+        money[cnt] = 2 + 1 + (sum * 0.5);
+      }
+      if(frm.lg.value == "메이저리그"  && frm.speed.value >= 145 && frm.speed.value < 150 && sum || sum == 0) {
+        money[cnt] = 2 + 0.5 + (sum * 0.5);
+      }
+      if(frm.lg.value == "메이저리그" && frm.speed.value < 145 && sum || sum == 0) {
+        money[cnt] = 2 + 0 + (sum * 0.5);
+      }
+      frm.name.value = "";
+      frm.speed.value = "";
+      document.getElementById('lg1').checked = true;
+      document.getElementById('lg2').checked = false;
+      document.getElementById('lg3').checked = false;
+      document.getElementById('bt1').checked = false;
+      document.getElementById('bt2').checked = false;
+      document.getElementById('bt3').checked = false;
+      document.getElementById('bt4').checked = false;
+      document.getElementById('bt5').checked = false;
+      document.getElementById('bt6').checked = false;
+      frm.name.focus();
+      str = "";
+    }
+
+    for(let i = 0; i < name0.length; i++) {
+        let money = 1;
+        table1 += "<tr>";
+          table1 += "<td>";
+          table1 += name0[i];
+          table1 += "</td>";
+          table1 += "<td>";
+          table1 += lg0[i];
+          table1 += "</td>";
+          table1 += "<td>";
+          table1 += speed0[i];
+          table1 += "</td>";
+          table1 += "<td>";
+          table1 += bt0[i];
+          table1 += "</td>";
+          table1 += "<td>";
+          if(lg0[i] == "메이저리그") {
+            money += 1;
+          }
+          else if(lg0[i] == "마이너리그") {
+            money += 0.5;
+          }
+          if(speed0[i] >= 150) {
+            money += 1;
+          }
+          else if(speed0[i] >=145 && speed0[i] <150) {
+            money += 0.5;
+          }
+          if(summ[i]) {
+            money += parseInt(summ[i]) * 0.5;
+          }
+          table1 += money + "억";
+          table1 += "</td>";
+        table1 += "</tr>";
+        money = 1;
+      }
+      table1 += "</table>"
+      document.write(table1);
+    }
+  </script>
+</head>
+<body>
+<form name="frm">
+  <h3>투수데이터베이스</h3>
+  <table border="1" cellspacing="3" cellpadding="11">
+    <tr>
+      <td>이름</td>
+      <td><input type="text" name="name"></td>
+    </tr>
+    <tr>
+      <td>리그</td>
+      <td>
+        <input type="radio" name="lg" id="lg1" value="메이저리그" checked>메이져리그
+        <input type="radio" name="lg" id="lg2" value="마이너리그">마이너리그
+        <input type="radio" name="lg" id="lg3" value="독립리그">독립리그
+      </td>
+    </tr>
+    <tr>
+      <td>구속</td>
+      <td><input type="text" name="speed">km</td>
+    </tr>
+    <tr>
+      <td>구종</td>
+      <td>
+        <input type="checkbox" name="bt1" id="bt1" value="커브">커브
+        <input type="checkbox" name="bt2" id="bt2" value="슬라이더">슬라이더
+        <input type="checkbox" name="bt3" id="bt3" value="체인지업">체인지업
+        <input type="checkbox" name="bt4" id="bt4" value="너클볼">너클볼
+        <input type="checkbox" name="bt5" id="bt5" value="커터">커터
+        <input type="checkbox" name="bt6" id="bt6" value="싱커">싱커
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2" align="center">
+        <input type="button" value="입력" onclick="input()">
+        <input type="button" value="출력" onclick="output()">
+      </td>
+    </tr>
+  </table>
+</form>
+</body>
+
+</html>
